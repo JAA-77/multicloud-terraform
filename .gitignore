@@ -1,0 +1,7 @@
+.terraform*
+terraform*
+*.json
+*.tfvars
+*.pem
+backend.tf
+.DS_Store
