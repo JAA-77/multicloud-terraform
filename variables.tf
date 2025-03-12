@@ -4,7 +4,7 @@ data "local_file" "mcd_api_key" {
 
 variable "ciscomcd_api_key_file" {
   type = string  
-  content = data.local_file.mcd_api_key.content
+  default = data.local_file.mcd_api_key.content
 }
 
 variable "aws_account_name" {
