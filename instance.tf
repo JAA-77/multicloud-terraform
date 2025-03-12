@@ -1,3 +1,4 @@
+/*
 resource "ciscomcd_gateway" "aws_hub_gw1" {
   name                  = "aws-hub-gw1"
   description           = "AWS Gateway 1"
@@ -38,3 +39,4 @@ resource "ciscomcd_gateway" "aws_ingress_gw1" {
   #   log_profile            = ""
   #   packet_capture_profile = ""
 }
+*/
