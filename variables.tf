@@ -27,12 +27,14 @@ variable "vpc_subnet_bits" {
   description = "Number of additional bits in the subnet. The final subnet mask is the vpc_cidr mask + the value provided here"
   default     = 8
 }
+*/
 
 variable "region" {
   description = "(Optional) AWS region where Service VPC (and ciscomcd Gateways) are deployed. Required when running as root module"
   default     = "us-east-1"
 }
 
+/*
 variable "gateway_image" {
   type = string
 }
