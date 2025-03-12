@@ -8,7 +8,7 @@ variable "aws_account_name" {
 
 variable "zones" {
   description = "List of Availability Zone names where the ciscomcd Gateway instances are deployed"
-  default     = ["us-east-1a", "us-east-1b"]
+  default     = ["us-east-1a"]
 }
 
 variable "prefix" {
