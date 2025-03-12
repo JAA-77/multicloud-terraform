@@ -3,7 +3,7 @@ variable "ciscomcd_api_key_file" {
   type = string  
   default = "./mcd_api_key.json"
 }
-
+/*
 variable "aws_account_name" {
   type = string
 }
@@ -73,3 +73,4 @@ variable "ciscomcd_svpc_use_nat_gateway" {
 
 variable "spoke_vpcs" {
 }
+*/
