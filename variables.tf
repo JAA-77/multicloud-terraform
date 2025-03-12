@@ -1,10 +1,7 @@
-data "local_file" "mcd_api_key" {
-  filename = "${path.module}/mcd_api_key.json"
-}
 
 variable "ciscomcd_api_key_file" {
   type = string  
-  default = "${path.module}/mcd_api_key.json"
+  default = "./mcd_api_key.json"
 }
 
 variable "aws_account_name" {
