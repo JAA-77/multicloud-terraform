@@ -1,5 +1,6 @@
 variable "ciscomcd_api_key_file" {
   type = string
+  default = file("${path.module}/mcd_api_key.json")
 }
 
 variable "aws_account_name" {
