@@ -1,4 +1,4 @@
-/*
+
 resource "ciscomcd_service_vpc" "aws_service_vpc" {
   name               = var.ciscomcd_svpc_name
   csp_account_name   = var.aws_account_name
@@ -8,4 +8,23 @@ resource "ciscomcd_service_vpc" "aws_service_vpc" {
   transit_gateway_id = aws_ec2_transit_gateway.ciscomcd_tgw.id
   use_nat_gateway    = var.ciscomcd_svpc_use_nat_gateway
 }
+
+
+/* Exportado de CSC
+
+resource "ciscomcd_service_vpc" "inspection-vpc" {
+	name = "inspection-vpc"
+	csp_account_name = "AWS_CiscoU_Test_Acct"
+	region = "us-east-1"
+	cidr = "10.20.30.0/24"
+	availability_zones = ["us-east-1a"]
+	use_nat_gateway = false
+	transit_gateway_id = "tgw-08f0b3473b2efe303"
+}
+
+resource "ciscomcd_spoke_vpc" "inspection-vpc-spoke0" {
+	service_vpc_id = ciscomcd_service_vpc.inspection-vpc.id
+	spoke_vpc_id = "vpc-0d282152fc344311d"
+}
+
 */
