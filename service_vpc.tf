@@ -7,7 +7,7 @@ resource "ciscomcd_service_vpc" "aws_service_vpc" {
   availability_zones = var.zones
   transit_gateway_id = aws_ec2_transit_gateway.ciscomcd_tgw.id
   use_nat_gateway    = var.ciscomcd_svpc_use_nat_gateway
-  tags {
+  tags = {
     proyecto = var.proyecto
   }
 
