@@ -76,7 +76,7 @@ variable "ciscomcd_svpc_use_nat_gateway" {
 
 variable "proyecto" {
   type    = string
-  default = "PoC de Cisco MultiCloud Defense"
+  default = "PoC1 de Cisco MultiCloud Defense"
 
 /*
 variable "spoke_vpcs" {
