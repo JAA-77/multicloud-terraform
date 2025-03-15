@@ -94,7 +94,7 @@ resource "aws_instance" "defender_instance" {
     security_groups      = [aws_security_group.defender_sg.id]
     iam_instance_profile = aws_iam_instance_profile.ec2_role_profile.name
     associate_public_ip_address = true
-    ssh_key_pair          = "mcd-demo"
+    //ssh_key_pair          = "mcd-demo"
 
     ebs_block_device {
         device_name = "/dev/xvda"
@@ -124,7 +124,7 @@ resource "aws_instance" "attacker_instance" {
     security_groups      = [aws_security_group.attacker_sg.id]
     iam_instance_profile = aws_iam_instance_profile.ec2_role_profile.name
     associate_public_ip_address = true
-    ssh_key_pair          = "mcd-demo"
+    //ssh_key_pair          = "mcd-demo"
 
     ebs_block_device {
         device_name = "/dev/xvda"
