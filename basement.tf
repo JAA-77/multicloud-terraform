@@ -81,12 +81,12 @@ resource "aws_route_table" "attacker_pub_rt" {
 
 resource "aws_route_table_association" "defender_pub_rt_assoc" {
   subnet_id      = aws_subnet.defender_subnet_pub.id
-  route_table_id = terraform.workspace == 'basement' ? aws_route_table.defender_pub_rt.id : aws_route_table.defender_pub_rt.id
+  route_table_id = terraform.workspace == "basement" ? aws_route_table.defender_pub_rt.id : aws_route_table.defender_pub_rt.id
 }
 
 resource "aws_route_table_association" "attacker_pub_rt_assoc" {
   subnet_id      = aws_subnet.attacker_subnet_pub.id
-  route_table_id = terraform.workspace == 'basement' ? aws_route_table.attacker_pub_rt.id : aws_route_table.attacker_pub_rt.id
+  route_table_id = terraform.workspace == "basement" ? aws_route_table.attacker_pub_rt.id : aws_route_table.attacker_pub_rt.id
 }
 
 resource "aws_instance" "defender_instance" {
