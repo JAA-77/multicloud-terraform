@@ -1,3 +1,5 @@
+/*
+
 resource "aws_vpc" "defender_vpc" {
   cidr_block = "192.168.10.0/24"
   tags = {
@@ -225,3 +227,5 @@ output "attacker_instance_id" {
 output "attacker_instance_public_ip" {
     value = aws_instance.attacker_instance.public_ip
 }
+
+*/
