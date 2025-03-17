@@ -1,6 +1,7 @@
+
 resource "aws_key_pair" "deployer" {
   key_name   = "deployer-key"
-  public_key = file(var.ciscomcd_ssh_key_file
+  public_key = file(var.ciscomcd_ssh_key_file)
 }
 
 
