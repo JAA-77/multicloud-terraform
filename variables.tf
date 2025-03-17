@@ -6,7 +6,7 @@ variable "ciscomcd_api_key_file" {
 
 variable "ciscomcd_ssh_key_file" {
   type = string  
-  default = "./mcd_demo.pem"
+  default = "./mcd-demo.pem"
 }
 
 variable "aws_account_name" {
