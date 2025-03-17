@@ -1,6 +1,6 @@
 
-resource "aws_key_pair" "deployer" {
-  key_name   = "deployer-key"
+resource "aws_key_pair" "mcd-demo" {
+  key_name   = "mcd-demo"
   public_key = file(var.ciscomcd_ssh_key_file)
 }
 
