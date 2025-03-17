@@ -4,6 +4,11 @@ variable "ciscomcd_api_key_file" {
   default = "./mcd_api_key.json"
 }
 
+variable "ciscomcd_ssh_key_file" {
+  type = string  
+  default = "./mcd_demo.pem"
+}
+
 variable "aws_account_name" {
   type = string
   default = "AWS_CiscoU_Test_Acct"
