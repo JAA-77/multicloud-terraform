@@ -1,3 +1,8 @@
+resource "aws_key_pair" "deployer" {
+  key_name   = "deployer-key"
+  public_key = file(var.ciscomcd_ssh_key_file
+}
+
 
 resource "aws_vpc" "defender_vpc" {
   cidr_block = "192.168.10.0/24"
@@ -97,7 +102,7 @@ resource "aws_instance" "defender_instance" {
     security_groups      = [aws_security_group.defender_sg.id]
     iam_instance_profile = aws_iam_instance_profile.ec2_role_profile.name
     associate_public_ip_address = true
-    key_name             = file(var.ciscomcd_ssh_key_file)
+    //key_name             = file(var.ciscomcd_ssh_key_file)
 
     ebs_block_device {
         device_name = "/dev/xvda"
@@ -127,7 +132,7 @@ resource "aws_instance" "attacker_instance" {
     security_groups      = [aws_security_group.attacker_sg.id]
     iam_instance_profile = aws_iam_instance_profile.ec2_role_profile.name
     associate_public_ip_address = true
-    key_name             = file(var.ciscomcd_ssh_key_file)
+    //key_name             = file(var.ciscomcd_ssh_key_file)
 
     ebs_block_device {
         device_name = "/dev/xvda"
