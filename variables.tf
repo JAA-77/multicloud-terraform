@@ -4,10 +4,17 @@ variable "ciscomcd_api_key_file" {
   default = "./mcd_api_key.json"
 }
 
+variable "aws_key_pair" {
+  type = string
+  default = "mcd-demo"
+}
+
+/*
 variable "ciscomcd_ssh_key_file" {
   type = string  
   default = "./mcd-demo.pem"
 }
+*/
 
 variable "aws_account_name" {
   type = string

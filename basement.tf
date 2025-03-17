@@ -1,10 +1,5 @@
 
-/*
-resource "aws_key_pair" "mcd-demo" {
-  key_name   = "mcd-demo"
-  public_key = file(var.ciscomcd_ssh_key_file)
-}
-*/
+
 
 resource "aws_vpc" "defender_vpc" {
   cidr_block = "192.168.10.0/24"
@@ -105,7 +100,7 @@ resource "aws_instance" "defender_instance" {
     iam_instance_profile = aws_iam_instance_profile.ec2_role_profile.name
     associate_public_ip_address = true
     //key_name             = file(var.ciscomcd_ssh_key_file)
-    key_name             = "mcd-demo"
+    key_name             = var.aws_key_pair
 
     ebs_block_device {
         device_name = "/dev/xvda"
@@ -136,7 +131,7 @@ resource "aws_instance" "attacker_instance" {
     iam_instance_profile = aws_iam_instance_profile.ec2_role_profile.name
     associate_public_ip_address = true
     //key_name             = file(var.ciscomcd_ssh_key_file)
-    key_name             = "mcd-demo"
+    key_name             = var.aws_key_pair
 
     ebs_block_device {
         device_name = "/dev/xvda"
