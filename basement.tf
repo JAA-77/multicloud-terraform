@@ -4,7 +4,6 @@ resource "aws_key_pair" "mcd-demo" {
   public_key = file(var.ciscomcd_ssh_key_file)
 }
 
-
 resource "aws_vpc" "defender_vpc" {
   cidr_block = "192.168.10.0/24"
   tags = {
