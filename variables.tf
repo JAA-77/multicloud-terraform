@@ -47,12 +47,12 @@ variable "gateway_image" {
 */
 variable "ciscomcd_egress_policy_rule_set_name" {
   type    = string
-  default = "mcd-egress-ruleset-allow-all"  // Aqui va el nombre de la politica de filtrado configurada en MCD que se quiere asociar al nuevo TGW
+  default = "ciscomcd-egress-ruleset-allow-all"  // Aqui va el nombre de la politica de filtrado configurada en MCD que se quiere asociar al nuevo TGW
 }
 
 variable "ciscomcd_ingress_policy_rule_set_name" {
   type    = string
-  default = "mcd-ingress-ruleset-allow-all"  # Aqui va el nombre de la politica de filtrado configurada en MCD que se quiere asociar al nuevo TGW
+  default = "ciscomcd-ingress-ruleset-allow-all"  # Aqui va el nombre de la politica de filtrado configurada en MCD que se quiere asociar al nuevo TGW
 }
 /*
 variable "ciscomcd_egress_gateway_autoscale_min" {
