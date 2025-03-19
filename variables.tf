@@ -9,13 +9,6 @@ variable "aws_key_pair" {
   default = "mcd-demo"
 }
 
-/*
-variable "ciscomcd_ssh_key_file" {
-  type = string  
-  default = "./mcd-demo.pem"
-}
-*/
-
 variable "aws_account_name" {
   type = string
   default = "AWS_CiscoU_Test_Acct"
@@ -43,7 +36,7 @@ variable "vpc_subnet_bits" {
 */
 
 variable "region" {
-  description = "(Optional) AWS region where Service VPC (and ciscomcd Gateways) are deployed. Required when running as root module"
+  description = "AWS region where Service VPC (and ciscomcd Gateways) are deployed. Required when running as root module"
   default     = "us-east-1"
 }
 
