@@ -1,6 +1,6 @@
 
 resource "aws_ec2_transit_gateway" "ciscomcd_tgw" {
-  description = "ciscomcd_tgw"
+  description = "ciscomcd_tgw_terraformed"
   default_route_table_association    = "disable"
   default_route_table_propagation    = "disable"
   tags = {

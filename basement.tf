@@ -119,7 +119,7 @@ resource "aws_instance" "defender_instance" {
 
     tags = {
         Name = "Defender Instance"
-        proyecto = "PoC de Cisco MultiCloud Defense"        
+        proyecto = "PoC de Cisco MultiCloud Defense"
     }
 }
 
