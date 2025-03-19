@@ -33,7 +33,7 @@ resource "aws_subnet" "attacker_subnet_pub" {
   availability_zone = "us-east-1a"
   tags = {
     Name = "Attacker Subnet Public"
-    proyecto = "PoC de Cisco MultiCloud Defense"    
+    proyecto = "PoC de Cisco MultiCloud Defense"     
   }
 }
 
