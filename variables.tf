@@ -67,7 +67,7 @@ variable "ciscomcd_egress_gateway_autoscale_max" {
 */
 variable "ciscomcd_svpc_name" {
   type    = string
-  default = "inspection-vpc"
+  default = "inspection-vpc-terraformed"
 }
 /*
 # variable "aws_tgw_id" {

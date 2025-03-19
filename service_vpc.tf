@@ -19,13 +19,9 @@ resource "ciscomcd_service_vpc" "inspection-vpc" {
 	cidr = "10.20.30.0/24"
 	availability_zones = ["us-east-1a"]
 	use_nat_gateway = false
-	transit_gateway_id = "tgw-08f0b3473b2efe303"
+	transit_gateway_id = "tgw-06d0e46d4fbee71aa"
 }
 
-resource "ciscomcd_spoke_vpc" "inspection-vpc-spoke0" {
-	service_vpc_id = ciscomcd_service_vpc.inspection-vpc.id
-	spoke_vpc_id = "vpc-0d282152fc344311d"
-}
 
 */
 
