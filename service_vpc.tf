@@ -1,4 +1,4 @@
-
+/* Tessting only visibility
 resource "ciscomcd_service_vpc" "aws_service_vpc" {
   name               = var.ciscomcd_svpc_name
   csp_account_name   = var.aws_account_name
@@ -8,10 +8,10 @@ resource "ciscomcd_service_vpc" "aws_service_vpc" {
   transit_gateway_id = aws_ec2_transit_gateway.ciscomcd_tgw.id
   use_nat_gateway    = var.ciscomcd_svpc_use_nat_gateway
 }
+Tessting only visibility */
 
 
 /* Exportado de CSC
-
 resource "ciscomcd_service_vpc" "inspection-vpc" {
 	name = "inspection-vpc"
 	csp_account_name = "AWS_CiscoU_Test_Acct"
@@ -21,8 +21,6 @@ resource "ciscomcd_service_vpc" "inspection-vpc" {
 	use_nat_gateway = false
 	transit_gateway_id = "tgw-06d0e46d4fbee71aa"
 }
-
-
 */
 
 /* Exportado de AWS CloudShell

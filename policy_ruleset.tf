@@ -1,4 +1,4 @@
-/*  Las Policy Rule Set no se deben crear sino lear del CSC
+/*  Las Policy Rule Set no se deben crear sino leer del CSC !!!
 
 resource "ciscomcd_policy_rule_set" "ingress_policy" {
   name = var.ciscomcd_ingress_policy_rule_set_name
