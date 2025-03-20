@@ -93,7 +93,7 @@ resource "aws_route_table_association" "attacker_pub_rt_assoc" {
 }
 
 resource "aws_instance" "defender_instance" {
-    ami                  = "ami-0c101f26f147fa7fd"
+    ami                  = "ami-08b5b3a93ed654d19"
     instance_type        = "t2.micro"
     subnet_id            = aws_subnet.defender_subnet_pub.id
     security_groups      = [aws_security_group.defender_sg.id]
@@ -123,7 +123,7 @@ resource "aws_instance" "defender_instance" {
 }
 
 resource "aws_instance" "attacker_instance" {
-    ami                  = "ami-0c101f26f147fa7fd"
+    ami                  = "ami-08b5b3a93ed654d19"
     instance_type        = "t2.micro"
     subnet_id            = aws_subnet.attacker_subnet_pub.id
     security_groups      = [aws_security_group.attacker_sg.id]
