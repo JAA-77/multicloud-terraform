@@ -190,6 +190,13 @@ resource "aws_security_group" "defender_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -202,6 +209,13 @@ resource "aws_security_group" "attacker_sg" {
   name        = "Attacker Security Group"
   description = "Allow outbound access to 0.0.0.0/0"
   vpc_id      = aws_vpc.attacker_vpc.id
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   egress {
     from_port   = 0
