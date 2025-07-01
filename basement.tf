@@ -20,7 +20,7 @@ resource "aws_vpc" "attacker_vpc" {
 resource "aws_subnet" "defender_subnet_pub" {
   vpc_id            = aws_vpc.defender_vpc.id
   cidr_block        = "192.168.10.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = "eu-west-1a"
   tags = {
     Name = "Defender Subnet Public"
     proyecto = "PoC de Cisco MultiCloud Defense"    
@@ -30,7 +30,7 @@ resource "aws_subnet" "defender_subnet_pub" {
 resource "aws_subnet" "attacker_subnet_pub" {
   vpc_id            = aws_vpc.attacker_vpc.id
   cidr_block        = "192.168.11.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = "eu-west-1a"
   tags = {
     Name = "Attacker Subnet Public"
     proyecto = "PoC de Cisco MultiCloud Defense"     

@@ -16,7 +16,7 @@ variable "aws_account_name" {
 
 variable "zones" {
   description = "List of Availability Zone names where the ciscomcd Gateway instances are deployed"
-  default     = ["eu-west-3a"]
+  default     = ["eu-west-1a"]
 }
 /*
 variable "prefix" {
@@ -37,7 +37,7 @@ variable "vpc_subnet_bits" {
 
 variable "region" {
   description = "AWS region where Service VPC (and ciscomcd Gateways) are deployed. Required when running as root module"
-  default     = "eu-west-3"
+  default     = "eu-west-1"
 }
 
 /*
