@@ -1,7 +1,7 @@
 
+// Prueba
 
-
-resource "aws_vpc" "defender_vpc" {
+resource "aws_vpc" "defender_vpc" { 
   cidr_block = "192.168.10.0/24"
   tags = {
     Name = "Defender VPC"
