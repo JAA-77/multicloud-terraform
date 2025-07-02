@@ -5,5 +5,3 @@ terraform*
 *.pem
 backend.tf
 .DS_Store
-.aws
-.aws\credentials
