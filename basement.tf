@@ -151,10 +151,10 @@ resource "aws_instance" "attacker_instance" {
 }
 
 resource "aws_iam_instance_profile" "mcd_ec2_role_profile" {
-  role = aws_iam_role.ec2_role.name
+  role = aws_iam_role.mcd_ec2_role.name
 }
 
-resource "aws_iam_role" "ec2_role" {
+resource "aws_iam_role" "mcd_ec2_role" {
   name = "EC2RoleForSSM"
 
   assume_role_policy = <<EOF
@@ -174,7 +174,7 @@ EOF
 }
 
 resource "aws_iam_role_policy_attachment" "ec2_ssm_policy_attachment" {
-  role       = aws_iam_role.ec2_role.name
+  role       = aws_iam_role.mcd_ec2_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
 
