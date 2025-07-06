@@ -1,4 +1,4 @@
-/* Tessting only visibility
+/* Testing only visibility
 
 resource "ciscomcd_gateway" "aws_hub_gw1" {
   name                  = "aws-hub-gw1"
@@ -41,4 +41,4 @@ resource "ciscomcd_gateway" "aws_ingress_gw1" {
   #   packet_capture_profile = ""
 }
 
-Tessting only visibility */
+Testing only visibility */

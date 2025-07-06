@@ -5,7 +5,7 @@ terraform {
     }
     ciscomcd = {
       source  = "CiscoDevNet/ciscomcd"
-      version = "0.3.1"
+      version = "0.3.6"
     }
   }
 }

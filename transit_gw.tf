@@ -1,4 +1,5 @@
-/* Tessting only visibility
+/* Testing only visibility
+
 resource "aws_ec2_transit_gateway" "ciscomcd_tgw" {
   description = "ciscomcd_tgw_terraformed"
   default_route_table_association    = "disable"
@@ -7,7 +8,8 @@ resource "aws_ec2_transit_gateway" "ciscomcd_tgw" {
     proyecto = var.proyecto
   }
 }
-Tessting only visibility */
+
+Testing only visibility */
 
 
 /* Exportado de AWS CloudShell
