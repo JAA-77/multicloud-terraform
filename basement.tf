@@ -97,7 +97,7 @@ resource "aws_instance" "defender_instance" {
     instance_type        = "t2.micro"
     subnet_id            = aws_subnet.defender_subnet_pub.id
     security_groups      = [aws_security_group.defender_sg.id]
-    iam_instance_profile = aws_iam_instance_profile.ec2_role_profile.name
+    iam_instance_profile = aws_iam_instance_profile.mcd_ec2_role_profile.name
     associate_public_ip_address = true
     key_name             = var.aws_key_pair
 
@@ -127,7 +127,7 @@ resource "aws_instance" "attacker_instance" {
     instance_type        = "t2.micro"
     subnet_id            = aws_subnet.attacker_subnet_pub.id
     security_groups      = [aws_security_group.attacker_sg.id]
-    iam_instance_profile = aws_iam_instance_profile.ec2_role_profile.name
+    iam_instance_profile = aws_iam_instance_profile.mcd_ec2_role_profile.name
     associate_public_ip_address = true
     key_name             = var.aws_key_pair
 
@@ -150,7 +150,7 @@ resource "aws_instance" "attacker_instance" {
     }
 }
 
-resource "aws_iam_instance_profile" "ec2_role_profile" {
+resource "aws_iam_instance_profile" "mcd_ec2_role_profile" {
   role = aws_iam_role.ec2_role.name
 }
 
