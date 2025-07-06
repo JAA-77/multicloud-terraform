@@ -155,7 +155,7 @@ resource "aws_iam_instance_profile" "mcd_ec2_role_profile" {
 }
 
 resource "aws_iam_role" "mcd_ec2_role" {
-  name = "EC2RoleForSSM"
+  name = "MCDEC2RoleForSSM"
 
   assume_role_policy = <<EOF
 {
