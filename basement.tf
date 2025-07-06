@@ -2,7 +2,7 @@
 // Crear las VPCs spokes y las instancias EC2 de ellas
 
 resource "aws_vpc" "defender_vpc" { 
-  cidr_block = "192.168.10.0/24"
+  cidr_block = "192.168.20.0/24"
   tags = {
     Name = "Defender VPC"
     proyecto = "PoC de Cisco MultiCloud Defense"
@@ -10,7 +10,7 @@ resource "aws_vpc" "defender_vpc" {
 }
 
 resource "aws_vpc" "attacker_vpc" {
-  cidr_block = "192.168.11.0/24"
+  cidr_block = "192.168.21.0/24"
   tags = {
     Name = "Attacker VPC"
     proyecto = "PoC de Cisco MultiCloud Defense"
