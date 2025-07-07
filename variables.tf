@@ -43,7 +43,7 @@ variable "region" {
 
 variable "gateway_image" {
   type = string
-  default = 24.06-14
+  default = "24.06-14"
 }
 
 variable "ciscomcd_egress_policy_rule_set_name" {
