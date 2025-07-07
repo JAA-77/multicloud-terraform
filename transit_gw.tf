@@ -1,4 +1,4 @@
-/* Testing only visibility
+
 
 resource "aws_ec2_transit_gateway" "ciscomcd_tgw" {
   description = "ciscomcd_tgw_terraformed"
@@ -9,7 +9,6 @@ resource "aws_ec2_transit_gateway" "ciscomcd_tgw" {
   }
 }
 
-Testing only visibility */
 
 
 /* Exportado de AWS CloudShell

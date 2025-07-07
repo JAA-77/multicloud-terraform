@@ -5,7 +5,7 @@ resource "aws_vpc" "defender_vpc" {
   cidr_block = "192.168.20.0/24"
   tags = {
     Name = "Defender VPC"
-    proyecto = "PoC de Cisco MultiCloud Defense"
+    proyecto = var.proyecto
   }
 }
 
@@ -13,7 +13,7 @@ resource "aws_vpc" "attacker_vpc" {
   cidr_block = "192.168.21.0/24"
   tags = {
     Name = "Attacker VPC"
-    proyecto = "PoC de Cisco MultiCloud Defense"
+    proyecto = var.proyecto
   }
 }
 
@@ -23,7 +23,7 @@ resource "aws_subnet" "defender_subnet_pub" {
   availability_zone = "eu-west-1a"
   tags = {
     Name = "Defender Subnet Public"
-    proyecto = "PoC de Cisco MultiCloud Defense"    
+    proyecto = var.proyecto
   }
 }
 
@@ -33,7 +33,7 @@ resource "aws_subnet" "attacker_subnet_pub" {
   availability_zone = "eu-west-1a"
   tags = {
     Name = "Attacker Subnet Public"
-    proyecto = "PoC de Cisco MultiCloud Defense"     
+    proyecto = var.proyecto
   }
 }
 
@@ -41,7 +41,7 @@ resource "aws_internet_gateway" "defender_igw" {
   vpc_id = aws_vpc.defender_vpc.id
   tags = {
     Name = "Defender IGW"
-    proyecto = "PoC de Cisco MultiCloud Defense"    
+    proyecto = var.proyecto
   }
 }
 
@@ -49,7 +49,7 @@ resource "aws_internet_gateway" "attacker_igw" {
   vpc_id = aws_vpc.attacker_vpc.id
   tags = {
     Name = "Attacker IGW"
-    proyecto = "PoC de Cisco MultiCloud Defense"    
+    proyecto = var.proyecto
   }
 }
 
@@ -62,7 +62,7 @@ resource "aws_route_table" "defender_pub_rt" {
   }
   tags = {
     Name = "Defender Pub RT"
-    proyecto = "PoC de Cisco MultiCloud Defense"    
+    proyecto = var.proyecto
   }
 }
 
@@ -76,7 +76,7 @@ resource "aws_route_table" "attacker_pub_rt" {
 
   tags = {
     Name = "Attacker Pub RT"
-    proyecto = "PoC de Cisco MultiCloud Defense"    
+    proyecto = var.proyecto
   }
 }
 
@@ -118,7 +118,7 @@ resource "aws_instance" "defender_instance" {
 
     tags = {
         Name = "Defender Instance"
-        proyecto = "PoC de Cisco MultiCloud Defense"
+        proyecto = var.proyecto
     }
 }
 
@@ -146,7 +146,7 @@ resource "aws_instance" "attacker_instance" {
 
     tags = {
         Name = "Attacker Instance"
-        proyecto = "PoC de Cisco MultiCloud Defense"        
+        proyecto = var.proyecto
     }
 }
 
