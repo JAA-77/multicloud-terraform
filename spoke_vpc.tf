@@ -1,4 +1,4 @@
-/*
+
 
 resource "ciscomcd_spoke_vpc" "ciscomcd_spoke" {
   for_each                           = var.spoke_vpcs
@@ -7,4 +7,3 @@ resource "ciscomcd_spoke_vpc" "ciscomcd_spoke" {
   transit_gateway_attachment_subnets = each.value.spoke_vpc_subnets
 }
 
-*/
