@@ -32,7 +32,7 @@ resource "ciscomcd_service_vpc" "inspection-vpc" {
       + csp_account_name       = "AWS_CiscoU_Test_Acct"
       + id                     = (known after apply)
       + management_vpc_id      = (known after apply)
-      + name                   = "inspection-vpc"
+      + name                   = "inspection-vpc-terraformed"
       + nat_gateway_public_ips = (known after apply)
       + region                 = "eu-west-1"
       + service_vpc_id         = (known after apply)
