@@ -12,9 +12,9 @@ resource "ciscomcd_spoke_vpc" "ciscomcd_spoke_attacker" {
 }
 
 
-/* I don't know how to set the values on spoke_vpcs so I have splitted the for statement
+/* I don't know how to set the values on spoke_vpcs, not using static direct asignment on terraform.tfvars file, so I have splitted the for statement
 
-var.spoke_vpcs = {
+spoke_vpcs = {
   "attacker" = {
     spoke_vpc_id = aws_vpc.attacker_vpc.id
     spoke_vpc_subnets = [aws_vpc.attacker_subnet_pub.id]
