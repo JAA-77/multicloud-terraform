@@ -86,5 +86,5 @@ variable "proyecto" {
 
 variable "spoke_vpcs" {
   type = list(string)
-  default = [aws_vpc.defender_vpc.id,aws_vpc.attacker_igwder_vpc.id]
+  default = [aws_vpc.defender_vpc.id, aws_vpc.attacker_vpc.id]
 }
