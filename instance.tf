@@ -1,4 +1,4 @@
-/* Testing only visibility
+
 
 resource "ciscomcd_gateway" "aws_hub_gw1" {
   name                  = "aws-hub-gw1"
@@ -12,7 +12,7 @@ resource "ciscomcd_gateway" "aws_hub_gw1" {
   policy_rule_set_id    = ciscomcd_policy_rule_set.egressew_policy.rule_set_id
   ssh_key_pair          = var.aws_key_pair
   aws_iam_role_firewall = "ciscomcd-gateway-role"
-  region                = "es-west-1"
+  region                = var.region
   vpc_id                = ciscomcd_service_vpc.aws_service_vpc.id
   min_instances         = var.ciscomcd_egress_gateway_autoscale_min
   max_instances         = var.ciscomcd_egress_gateway_autoscale_max
@@ -33,7 +33,7 @@ resource "ciscomcd_gateway" "aws_ingress_gw1" {
   policy_rule_set_id    = ciscomcd_policy_rule_set.ingress_policy.rule_set_id
   ssh_key_pair          = var.aws_key_pair
   aws_iam_role_firewall = "ciscomcd-gateway-role"
-  region                = "es-west-1"
+  region                = var.region
   vpc_id                = ciscomcd_service_vpc.aws_service_vpc.id
   min_instances         = var.ciscomcd_egress_gateway_autoscale_min
   max_instances         = var.ciscomcd_egress_gateway_autoscale_max
@@ -41,4 +41,3 @@ resource "ciscomcd_gateway" "aws_ingress_gw1" {
   #   packet_capture_profile = ""
 }
 
-Testing only visibility */

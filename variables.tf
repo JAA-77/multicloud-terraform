@@ -84,8 +84,8 @@ variable "proyecto" {
   default = "PoC de Cisco MultiCloud Defense"
 }
 
-
+/*
 variable "spoke_vpcs" {
   
 }
-
+*/
