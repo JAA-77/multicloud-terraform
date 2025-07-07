@@ -25,7 +25,6 @@ resource "aws_subnet" "defender_subnet_pub" {
     Name = "Defender Subnet Public"
     proyecto = var.proyecto
   }
-  var.spoke_vpcs=aws_vpc.defender_vpc.id
 }
 
 resource "aws_subnet" "attacker_subnet_pub" {
