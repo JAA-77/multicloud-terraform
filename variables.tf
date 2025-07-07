@@ -40,11 +40,12 @@ variable "region" {
   default     = "eu-west-1"
 }
 
-/*
+
 variable "gateway_image" {
   type = string
+  default = 24.06-14
 }
-*/
+
 variable "ciscomcd_egress_policy_rule_set_name" {
   type    = string
   default = "ciscomcd-egress-ruleset-allow-all"  // Aqui va el nombre de la politica de filtrado configurada en MCD que se quiere asociar al nuevo TGW
