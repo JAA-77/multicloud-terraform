@@ -1,4 +1,4 @@
-/* Testing only visibility
+
 
 resource "ciscomcd_service_vpc" "aws_service_vpc" {
   name               = var.ciscomcd_svpc_name
@@ -10,7 +10,7 @@ resource "ciscomcd_service_vpc" "aws_service_vpc" {
   use_nat_gateway    = var.ciscomcd_svpc_use_nat_gateway
 }
 
-Testing only visibility */
+
 
 
 /* Exportado de CSC
