@@ -126,7 +126,7 @@ resource "aws_instance" "attacker_instance" {
     ami                  = "ami-0fab1b527ffa9b942"
     instance_type        = "t2.micro"
     subnet_id            = aws_subnet.attacker_subnet_pub.id
-    security_groups      = [aws_security_group.attacker_sg.id]
+    security_groups      = aws_security_group.attacker_sg.id
     iam_instance_profile = aws_iam_instance_profile.mcd_ec2_role_profile.name
     associate_public_ip_address = true
     key_name             = var.aws_key_pair
