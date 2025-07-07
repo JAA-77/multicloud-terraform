@@ -84,7 +84,8 @@ variable "proyecto" {
   default = "PoC de Cisco MultiCloud Defense"
 }
 
+/*
 variable "spoke_vpcs" {
   type = list(string)
-  default = [aws_vpc.defender_vpc.id, aws_vpc.attacker_vpc.id]
 }
+*/
