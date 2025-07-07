@@ -9,7 +9,8 @@ resource "ciscomcd_gateway" "aws_hub_gw1" {
   gateway_state         = "ACTIVE"
   mode                  = "HUB"
   security_type         = "EGRESS"
-  policy_rule_set_id    = ciscomcd_policy_rule_set.egressew_policy.rule_set_id
+  // policy_rule_set_id    = ciscomcd_policy_rule_set.egressew_policy.rule_set_id
+  policy_rule_set_id    = 7  // La politica de egress es la #7 ahora mismo en la CDO de MCD
   ssh_key_pair          = var.aws_key_pair
   aws_iam_role_firewall = "ciscomcd-gateway-role"
   region                = var.region
@@ -30,7 +31,8 @@ resource "ciscomcd_gateway" "aws_ingress_gw1" {
   gateway_state         = "ACTIVE"
   mode                  = "HUB"
   security_type         = "INGRESS"
-  policy_rule_set_id    = ciscomcd_policy_rule_set.ingress_policy.rule_set_id
+  // policy_rule_set_id    = ciscomcd_policy_rule_set.ingress_policy.rule_set_id
+  policy_rule_set_id    = 8  // La politica de egress es la #7 ahora mismo en la CDO de MCD
   ssh_key_pair          = var.aws_key_pair
   aws_iam_role_firewall = "ciscomcd-gateway-role"
   region                = var.region
