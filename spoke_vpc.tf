@@ -12,7 +12,8 @@ resource "ciscomcd_spoke_vpc" "ciscomcd_spoke_attacker" {
 }
 
 
-/*
+/* Me faltaría asignar a var.spoke_vpcs las vpcs para que este codigo funcionase
+
 resource "ciscomcd_spoke_vpc" "ciscomcd_spoke" {
   for_each                           = var.spoke_vpcs
   service_vpc_id                     = ciscomcd_service_vpc.aws_service_vpc.id
