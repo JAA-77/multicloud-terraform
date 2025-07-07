@@ -12,16 +12,16 @@ resource "ciscomcd_spoke_vpc" "ciscomcd_spoke_attacker" {
 }
 
 
-/* I don't know how to set the values on spoke_vpcs
+/* I don't know how to set the values on spoke_vpcs so I have splitted the for statement
 
 var.spoke_vpcs = {
   "attacker" = {
     spoke_vpc_id = aws_vpc.attacker_vpc.id
-    spoke_vpc_subnets = aws_vpc.attacker_subnet_pub
+    spoke_vpc_subnets = [aws_vpc.attacker_subnet_pub.id]
   },
   "defender" = {
     spoke_vpc_id = aws_vpc.defender_vpc.id
-    spoke_vpc_subnets = aws_vpc.defender_subnet_pub
+    spoke_vpc_subnets = [aws_vpc.defender_subnet_pub.id]
   }
 }
 
