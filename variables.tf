@@ -86,6 +86,6 @@ variable "proyecto" {
 
 
 variable "spoke_vpcs" {
-  type = map()
+  
 }
 
