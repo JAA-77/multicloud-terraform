@@ -1,7 +1,7 @@
 
 
-resource "ciscomcd_gateway" "aws_hub_gw1" {
-  name                  = "aws-hub-gw1"
+resource "ciscomcd_gateway" "aws_mcd_gw_egress" {
+  name                  = "aws_mcd_gw_egress"
   description           = "AWS Gateway 1"
   csp_account_name      = var.aws_account_name
   instance_type         = "AWS_M5_LARGE"
@@ -22,8 +22,8 @@ resource "ciscomcd_gateway" "aws_hub_gw1" {
   aws_gateway_lb = true
 }
 
-resource "ciscomcd_gateway" "aws_ingress_gw1" {
-  name                  = "aws-ingress-gw1"
+resource "ciscomcd_gateway" "aws_mcd_gw_ingress" {
+  name                  = "aws_mcd_gw_ingress"
   description           = "AWS Ingress Gateway"
   csp_account_name      = var.aws_account_name
   instance_type         = "AWS_M5_LARGE"
