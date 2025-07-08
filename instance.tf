@@ -2,7 +2,7 @@
 
 resource "ciscomcd_gateway" "aws_mcd_gw_egress" {
   name                  = "aws_mcd_gw_egress"
-  description           = "AWS Gateway 1"
+  description           = "AWS MCD Egress Gateway"
   csp_account_name      = var.aws_account_name
   instance_type         = "AWS_M5_LARGE"
   gateway_image         = var.gateway_image
@@ -24,7 +24,7 @@ resource "ciscomcd_gateway" "aws_mcd_gw_egress" {
 
 resource "ciscomcd_gateway" "aws_mcd_gw_ingress" {
   name                  = "aws_mcd_gw_ingress"
-  description           = "AWS Ingress Gateway"
+  description           = "AWS MCD Ingress Gateway"
   csp_account_name      = var.aws_account_name
   instance_type         = "AWS_M5_LARGE"
   gateway_image         = var.gateway_image
